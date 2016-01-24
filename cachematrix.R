@@ -1,4 +1,10 @@
 
+##The first function, makeCacheMatrix creates a special "matirix", which is really a list containing a function to
+
+  set the value of the matrix
+  get the value of the matrix
+  set the value of the InvMat
+  get the value of the InvMat
 
  makeCacheMatrix <- function(x = matrix()) { 
       InvMat<-NULL
@@ -20,7 +26,10 @@
 
  
 
- ## Write a short comment describing this function 
+ ## The following function calculates the InvMat of the special "matrix" created with the above function. 
+ However, it first checks to see if the InvMat has already been calculated. If so, it gets the InvMat from the cache 
+ and skips the computation. Otherwise, it calculates the InvMat of the data and sets the value of the InvMat in the cache 
+ via the setInvMat function.
  
 
  cacheSolve <- function(x) { 
